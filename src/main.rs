@@ -88,7 +88,7 @@ async fn handle_event(
         }
         Event::MessageCreate(msg) => {
             let mut map = HashMap::new();
-            map.insert("message", "https://now-egift.com");
+            map.insert("message", &msg.content);
 
             println!("received message: {}", msg.content);
 
